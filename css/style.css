@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    content: "";
+    box-sizing: border-box;
+}
+
+.container {
+    width: 50%;
+    margin: 1rem auto;
+    border: 1px solid orange;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.container>p {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container>div {
+    display: flex;
+    justify-content: center;
+
+}
+
+.container>div>button {
+    padding: 1rem 2rem;
+
+}
