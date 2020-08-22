@@ -8,7 +8,46 @@
 </head>
 
 <body>
-    abc
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Demo Javascript</title>
+    </head>
+
+    <body>
+        <div id="dongho"></div>
+        <script type="text/javascript" charset="utf-8">
+            //Lấy giờ hệ thống liên tục
+            var so_lan_goi = 0;
+            var bien_ben_ngoai = 0;
+
+            function dong_ho(ten_bat_ky, so_lan_goi) {
+                so_lan_goi++;
+                bien_ben_ngoai++;
+                var date = new Date();
+                var gio = date.getHours();
+                var phut = date.getMinutes();
+                var giay = date.getSeconds();
+                document.getElementById('dongho').innerHTML = gio + ':' + phut + ':' + giay;
+                console.log(ten_bat_ky);
+                console.log('Số lần gọi: ' + so_lan_goi);
+                console.log('Biến bên ngoài: ' + bien_ben_ngoai);
+            }
+            setInterval(dong_ho, 1000, 'Các bạn có thể đặt tên biến bất kỳ', so_lan_goi);
+        </script>
+        <script type="text/javascript">
+            var action = 'Hello';
+            var closure = function(name) {
+                console.log(action + ' ' + name);
+            }
+            closure('Andy Vũ');
+        </script>
+    </body>
+
+    </html>
 </body>
 
 </html>
